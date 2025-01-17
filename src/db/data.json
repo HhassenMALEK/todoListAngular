@@ -56,7 +56,7 @@
       "id": 5,
       "title": "Todo 5",
       "description": "Description 5",
-      "userId": 3, "status": "false",
+      "userId": 3, "status": "true",
       "category":"urgent"
     },
     {
@@ -64,7 +64,7 @@
       "title": "Todo 6",
       "description": "Description 6",
       "userId": 3,
-       "status": "false",
+       "status": "true",
       "category":"urgent"
     }
   ]

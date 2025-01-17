@@ -1,1 +1,30 @@
-<p>todo-list works!</p>
+<h1>Liste des tâches</h1>
+
+<table>
+<thead>
+  <tr>
+    <th>Tache</th>
+    <th>Description</th>
+    <th>Catégorie</th>
+  </tr>
+</thead>
+
+<h2>Taches à réaliser </h2>
+@for (todo of todos(); track todo) {
+  
+  @if (todo.status=== true ) {
+    <tr>
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.description }}</td>
+      <td>{{ todo.status }}</td>
+      <td>{{ todo.category }}</td>
+      <button [routerLink]="['/todos', todo.id, 'todos']">Détail</button>
+    </tr>
+  }
+  }
+  @empty {
+    <p>Aucune tâche</p>
+  }
+  
+</table>
+<h2>Taches terminées</h2>
