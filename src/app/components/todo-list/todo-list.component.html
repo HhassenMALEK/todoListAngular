@@ -1,6 +1,9 @@
 <h1>Liste des tâches</h1>
 
 <table>
+
+
+<h2>Taches à réaliser </h2>
 <thead>
   <tr>
     <th>Tache</th>
@@ -8,17 +11,40 @@
     <th>Catégorie</th>
   </tr>
 </thead>
-
-<h2>Taches à réaliser </h2>
 @for (todo of todos(); track todo) {
+
   
-  @if (todo.status=== true ) {
+  @if (todo.status) {
     <tr>
       <td>{{ todo.title }}</td>
       <td>{{ todo.description }}</td>
-      <td>{{ todo.status }}</td>
+   
       <td>{{ todo.category }}</td>
-      <button [routerLink]="['/todos', todo.id, 'todos']">Détail</button>
+      <button [routerLink]="['./todos', todo.id]">Détail</button>
+    </tr>
+  }
+  }
+  @empty {
+    <p>Aucune tâche</p>
+  }
+
+<h2>Taches terminées</h2>
+<thead>
+  <tr>
+    <th>Tache</th>
+    <th>Description</th>
+    <th>Catégorie</th>
+  </tr>
+</thead>
+@for (todo of todos(); track todo) {
+  
+  @if (!todo.status) {
+    <tr>
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.description }}</td>
+
+      <td>{{ todo.category }}</td>
+      <button [routerLink]="['/users',userId,'/todos', todo.id, 'todos']">Détail</button>
     </tr>
   }
   }
@@ -27,4 +53,3 @@
   }
   
 </table>
-<h2>Taches terminées</h2>

@@ -12,11 +12,11 @@ export const routes: Routes = [
   {path : "users", 
     children:[
       {path :"", component: UserListComponent},
-      {path : ":id", component: UserDetailComponent},
-      {path : ":id/todos", component: TodoListComponent},
-      {path : ":id/todos/:id", component: TodoDetailComponent},
+      {path : ":userid", component: UserDetailComponent},
+      {path : ":userid/todos", component: TodoListComponent},
+      {path : ":userid/todos/:todoid", component: TodoDetailComponent},
     ],
   },
   {path:"", redirectTo: "/home", pathMatch: "full"},
-  {path:"**", redirectTo: "/home", pathMatch: "full"}
+  {path:"**", redirectTo: "/home"}
 ];

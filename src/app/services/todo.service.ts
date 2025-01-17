@@ -11,10 +11,13 @@ export class TodoService {
   private readonly http = inject(HttpClient);
   private readonly url = 'http://localhost:3000/todos';
 
-  private _todos: Todo[] = [];
+  //private _todos: Todo[] = [];
 
   findAll(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.url);
   }
- 
+
+  findByUser(userid: string): Observable<Todo[]> {
+    return this.http.get<Todo[]>(this.url+'?userId='+userid);
+  }
 }
