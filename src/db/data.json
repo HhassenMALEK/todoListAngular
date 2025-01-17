@@ -1,0 +1,71 @@
+{
+  "users":[
+    {
+      "id": 1,
+      "name": "John",
+      "email": "Jhon@gmail.com"
+
+    },
+    {
+      "id": 2,
+      "name": "Doe",
+      "email": "Doe@gmail.com"
+      },
+
+    {
+      
+      "id": 3,
+      "name": "Admin",
+      "email": "Admin@gmail.com"
+    }
+  ],
+  "todos":[
+    {
+      "id": 1,
+      "title": "Todo 1",
+      "description": "Description 1",
+      "userId": 1,
+      "status": "false",
+      "category":"urgent"
+    },
+    {
+      "id": 2,
+      "title": "Todo 2",
+      "description": "Description 2",
+      "userId": 1,
+       "status": "false",
+      "category":"urgent"
+    },
+    {
+      "id": 3,
+      "title": "Todo 3",
+      "description": "Description 3",
+      "userId": 2,
+       "status": "false",
+      "category":"urgent"
+    },
+    {
+      "id": 4,
+      "title": "Todo 4",
+      "description": "Description 4",
+      "userId": 2,
+       "status": "false",
+      "category":"urgent"
+    },
+    {
+      "id": 5,
+      "title": "Todo 5",
+      "description": "Description 5",
+      "userId": 3, "status": "false",
+      "category":"urgent"
+    },
+    {
+      "id": 6,
+      "title": "Todo 6",
+      "description": "Description 6",
+      "userId": 3,
+       "status": "false",
+      "category":"urgent"
+    }
+  ]
+}
