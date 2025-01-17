@@ -1,6 +1,7 @@
 <p>Liste des utilisateurs</p>
 
-<thead>
+<table>
+  <thead>
   <tr>
     <th>Nom</th>
     <th>Email</th>
@@ -8,14 +9,13 @@
   </tr>
 </thead>
 @for (user of users(); track user) {
-  <table>
     <tr>
       <td>{{ user.name }}</td>
       <td>{{ user.email }}</td>
       <button [routerLink]="['/users', user.id, 'todos']">Détail</button>
     </tr>
-  </table>
-}
+  }
 @empty {
   <p>Aucun utilisateur</p>
 }
+</table>

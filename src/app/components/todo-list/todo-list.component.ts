@@ -22,7 +22,7 @@ export class TodoListComponent {
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.params['userid'];
-    console.log("user Id : "+this.userId+ "  "+this.route.snapshot);
+
   
     // récupération des todos de Json filtrés par utilisateurs
     this.todoService.findByUser(this.userId).subscribe(data => {

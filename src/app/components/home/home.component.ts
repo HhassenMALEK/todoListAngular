@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { UserListComponent } from '../user-list/user-list.component';
+import {ConnectionComponent } from '../connection/connection.component';
 
 
 @Component({
   selector: 'app-home',
   imports: [
    RouterLink,
-   UserListComponent
+   ConnectionComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

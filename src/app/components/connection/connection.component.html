@@ -1,0 +1,11 @@
+<h1>Login Page</h1>
+@if (!userConnected) {
+  <label>User</label><input type="text" [(ngModel)]="username" /><br />
+  <label>Pwd</label
+  ><input type="text" [(ngModel)]="password" type="password" /><br />
+} 
+@else {
+    //redirecttion
+}
+<button (click)="login()">{{ loginButton() }}</button>
+

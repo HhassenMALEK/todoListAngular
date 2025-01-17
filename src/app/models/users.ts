@@ -1,6 +1,8 @@
-export interface user{
+export interface User{
   id : string;
-  name: string; 
+  name: string;
+  password: string;
+  type: string; 
   email: string;
 }
-export type Users = user[];
+export type Users = User[];

@@ -3,12 +3,16 @@
     {
       "id": 1,
       "name": "John",
+      "password": "1234",
+      "type": "user",
       "email": "Jhon@gmail.com"
 
     },
     {
       "id": 2,
       "name": "Doe",
+      "password": "1234",
+      "type": "user",
       "email": "Doe@gmail.com"
       },
 
@@ -16,6 +20,8 @@
       
       "id": 3,
       "name": "Admin",
+      "password": "1234",
+      "type": "admin",
       "email": "Admin@gmail.com"
     }
   ],
