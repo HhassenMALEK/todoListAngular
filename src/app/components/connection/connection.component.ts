@@ -37,6 +37,27 @@ export class ConnectionComponent {
         alert('Login failed');
       }
     } else {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
      
     }
   }
