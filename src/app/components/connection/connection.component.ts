@@ -1,16 +1,20 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
-import { Users, User } from '../../models/users';
-
+import { User } from '../../models/users';
+import { RouterLink, Router } from '@angular/router';
 @Component({
   selector: 'app-connection',
-  imports: [FormsModule],
+  imports: [
+    FormsModule, 
+    RouterLink
+  ],
   templateUrl: './connection.component.html',
-  styleUrl: './connection.component.css',
+  styleUrls: ['./connection.component.css'],
 })
 export class ConnectionComponent {
   userService = inject(UserService);
+  router = inject(Router);
 
   user: User = { id: '', name: '', password: '', type: '', email: '' };
 
@@ -42,6 +46,7 @@ export class ConnectionComponent {
           if (this.user.password === this.password()) {
             this.userConnected = true;
             this.loginButton.set('logout');
+            this.router.navigate(['/users', this.user.id]);
           } else {
             alert('Login failed');
           }

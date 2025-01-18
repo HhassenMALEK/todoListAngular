@@ -1,11 +1,12 @@
 <h1>Login Page</h1>
 @if (!userConnected) {
-  <label>User</label><input type="text" [(ngModel)]="username" /><br />
-  <label>Pwd</label
-  ><input type="text" [(ngModel)]="password" type="password" /><br />
+  <label>User</label>
+  <input type="text" [(ngModel)]="username" /><br />
+  <label>Pwd</label>
+  <input type="password" [(ngModel)]="password" /><br />
+  <button (click)="login()">{{ loginButton() }}</button>
 } 
 @else {
-    //redirecttion
+  <p>Connecté</p>
 }
-<button (click)="login()">{{ loginButton() }}</button>
 
