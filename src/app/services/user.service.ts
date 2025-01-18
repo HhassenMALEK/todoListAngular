@@ -16,11 +16,16 @@ export class UserService {
     return this.http.get<Users>(this.url);
   }
 
-  findByUserName(username: string): Observable<User> {
-     const urlname = this.url+'?name='+username;    
-     console.log("dans service : "+urlname);
-     return this.http.get<User>(urlname);
-   }
+  // findByUserName(username: string): Observable<User> {
+  //    const urlname = this.url+'?name='+username;    
+  //    console.log("dans service : "+urlname);
+  //    return this.http.get<User>(urlname);
+  //  }
+
+  findByUserName(username: string): Observable<User[]> {
+    const urlname = `${this.url}?name=${username}`;
+    return this.http.get<User[]>(urlname);
+  }
   
 
 }
